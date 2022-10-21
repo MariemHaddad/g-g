@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.edu.gg.GUI.ConnexionController">
+   <children>
+      <Label layoutX="222.0" layoutY="53.0" text="Connectez_vous" textFill="#9e7913">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="adressemail" layoutX="236.0" layoutY="134.0" promptText="Adresse_email" />
+      <TextField fx:id="mdp" layoutX="236.0" layoutY="188.0" promptText="Mot_de_passe" />
+      <Button fx:id="connect" layoutX="275.0" layoutY="246.0" mnemonicParsing="false" onAction="#Actioon" text="Connecter" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Esperluette-removebg-preview%20(1)%20(1).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="433.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Inscrire" />
+   </children>
+</AnchorPane>
