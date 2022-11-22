@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau des Commandes</title>
+</head>
+<body >
+<h1 style="text-align: center; color: red">Volcano Football Services</h1>
+<h2 style="text-align: center">Tableau des Commandes</h2>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Quantite</th>
+            <th>Date_ajout</th>
+            <th>Adresse</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for commande in commandes %}
+            <tr>
+                <td>{{ commande.id }}</td>
+                <td>{{ commande.quantite }}</td>
+                <td>{{ commande.dateAjout ? commande.dateAjout|date('Y-m-d') : '' }}</td>
+                <td>{{ commande.adresse }}</td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% extends 'base-back.html.twig' %}
+
+
+{% block content %}
+
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box d-flex align-items-center justify-content-between">
+                <!--<h4 class="mb-0">Responsive Table</h4>-->
+
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);">Facture</a></li>
+                        <li class="breadcrumb-item active">Ajouter</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+
+                    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+                    <h4 class="card-title">Ajouter Facture</h4>
+                    <p class="card-title-desc"></p>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-md-2 col-form-label">{{ form_label(form.adresse) }}</label>
+                        <div class="col-md-10">
+                            <input class="form-control" {{ form_widget(form.adresse) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-md-2 col-form-label">{{ form_label(form.created_at) }}</label>
+                        <div class="col-md-10">
+                            <input class="form-control" {{ form_widget(form.created_at) }}
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-md-2 col-form-label">{{ form_label(form.prix) }}</label>
+                        <div class="col-md-10">
+                            <input class="form-control" {{ form_widget(form.prix) }}
+                        </div>
+                    </div>
+
+                     <div class="form-group row">
+                            <label for="example-text-input" class="col-md-2 col-form-label">{{ form_label(form.produit) }}</label>
+                            <div class="col-md-10">
+                                {{ form_widget(form.produit) }}
+                            </div>
+                        </div>
+
+                    <div class="form-group row">
+                        <label class="col-md-2 col-form-label">{{ form_label(form.users) }}</label>
+                        <div class="col-md-10">
+                            {{ form_widget(form.users) }}
+                        </div>
+                    </div>
+
+
+
+                                        <button type="submit" class="btn">Ajouter</button>
+
+
+                    {{ form_end(form) }}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
